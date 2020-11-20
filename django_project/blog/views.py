@@ -9,6 +9,7 @@ from .form import EventForm
 from django.urls import reverse_lazy
 from datetime import datetime, date, timedelta
 from django.utils.safestring import mark_safe
+import calendar
 
 """
 def cal(request):
