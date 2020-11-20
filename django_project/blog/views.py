@@ -6,7 +6,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .models import Post, Event
 from .utils import Calendar
 from .form import EventForm
-from django.urls import reverse_lazy, reverse
+from django.urls import reverse_lazy
 from datetime import datetime, date, timedelta
 from django.utils.safestring import mark_safe
 
@@ -156,6 +156,5 @@ def event(request, event_id=None):
 	form = EventForm(request.POST or None, instance=instance)
 	if request.POST and form.is_valid():
 		form.save()
-		print(reverse('calendar'))
-		return HttpResponseRedirect(reverse('calendar'))
+		return HttpResponseRedirect(reverse_lazy('calendar'))
 	return render(request, 'blog/event.html', {'form': form})	
