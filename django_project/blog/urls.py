@@ -2,9 +2,13 @@ from django.urls import path
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView, MyPostListView
 from . import views
 
+
 urlpatterns = [
     path('home', PostListView.as_view(), name='blog-home'),
     path('',views.welcome,name='blog-welcome'),
+    path('user/<str:user>/calendar', views.CalendarView.as_view(), name='calendar'),
+    path('event/new/', views.event, name='event_new'),
+    path('event/edit/<int:event_id>/', views.event, name='event_edit'),
     #path('pics/', PicsListView.as_view(), name='blog-pics'),
 
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
