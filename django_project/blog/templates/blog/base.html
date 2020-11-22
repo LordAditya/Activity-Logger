@@ -42,7 +42,13 @@
 	          <a class="nav-item nav-link" href=" {% url 'blog-home' %} ">All Projects</a>
 	          {% endif %}
 	          {% if user.is_authenticated %}
-	          	<a class="nav-item nav-link" href=" {% url 'my-posts' user %} ">Home</a>
+				  <a class="nav-item nav-link" href=" {% url 'my-posts' user %} ">Home</a>
+	          	{% else %}
+
+			  {% endif %}
+			  
+			  {% if user.is_authenticated %}
+	          	<a class="nav-item nav-link" href=" {% url 'calendar'%} ">Calendar</a>
 	          	{% else %}
 
 	          {% endif %}
