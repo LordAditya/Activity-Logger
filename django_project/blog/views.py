@@ -129,7 +129,7 @@ def model_form_upload(request):
         'form': form
     })
 
-class CalendarView(generic.ListView):
+class CalendarView(LoginRequiredMixin, generic.ListView):
     model = Event
     template_name = 'blog/calendar.html'
 
