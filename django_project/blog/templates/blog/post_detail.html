@@ -18,7 +18,7 @@
 		      	</div>
 		      {% endif %}
 		    </div>
-		    {% if object.author == user %}
+		    {% if object.author == user or object.coPI == user.username or object.member1 == user.username or object.member2 == user.username or object.member3 == user.username or object.member4 == user.username or object.member5 == user.username %}
 		    <h2><a class="article-title" href="{% url 'post-detail' post.id %} ">{{ post.title }}</a></h2>
 		    <p class="article-content">{{ object.content }}</p>
 		    <h5> PI - {{post.PI}} </h5>
