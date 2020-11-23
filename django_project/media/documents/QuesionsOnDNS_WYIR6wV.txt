@@ -1,0 +1,34 @@
+DNS: 
+Login to students.iitmandi.ac.in
+
+Do the following
+i) Add a filter to Wireshark that only shows DNS packets
+ii) Start capturing packets. 
+iii) Then open a terminal and run “dig +trace www.google.com” to perform iterative lookup. 
+iv) Stop the capture immediately after running dig 
+
+Answer the following questions
+1) What transport layer protocol does DNS use?
+
+
+2) Which port is used on client and server side?
+
+
+3) What are the distinct IP addresses contacted during an iterative lookup?
+
+
+4) Whose ip addresses are these?
+
+
+
+5) How long does iterative lookup take? Compute it from wireshark.
+
+
+6) Run dig www.google.com; which IP address responds to DNS lookup when +trace is not used?
+
+
+
+7) Find out the location of the server using ip location service.
+
+
+
