@@ -1,16 +1,14 @@
 # Project Management System
 
 # Activity Logger
-This is a web-based project management system which manages the projects, by giving the users access to the to set deadlines and schedule meetings (create minutes of the meeting), uploading revelant documents.
-
-For version 1, further features to be added in the version 2 (Scheduled release by november 20, 2020).
+This is a web-based project management system which manages the projects, by giving the users access to create projects, set deadlines, schedule meetings, create minutes of the meeting, and uploading revelant documents.
 
 ## Features
 * Dashboard displays all the running projects.
 * Each registered user can access the projects, they are involved in it.
 * Each project details (description, deadline, etc... ) can be updated by the project collabrators.
 * Add revelant documents, minutes of meetings, important contacts.
-* Scheduling meeting..
+* Add events to the calendar, or schedule meetings.
 
 ## Requirements
 * Python3
