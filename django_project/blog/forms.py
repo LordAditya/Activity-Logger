@@ -8,6 +8,7 @@ class DocumentForm(forms.ModelForm):
 
 from django.forms import ModelForm, DateInput
 from blog.models import Event
+from django.forms.widgets import TextInput
 
 class EventForm(ModelForm):
   class Meta:
@@ -18,6 +19,7 @@ class EventForm(ModelForm):
       'end_time': DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
     }
     fields = '__all__'
+    meeting_link=forms.URLField(initial="http://", widget=TextInput)
 
   def __init__(self, *args, **kwargs):
     super(EventForm, self).__init__(*args, **kwargs)

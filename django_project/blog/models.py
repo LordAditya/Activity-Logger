@@ -42,11 +42,13 @@ class Files(models.Model):
 	uploaded_at = models.DateTimeField(auto_now_add=True)
 
 class Event(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    start_time = models.DateTimeField()
-    end_time = models.DateTimeField()
-    @property
-    def get_html_url(self):
-        url = reverse('event_edit', args=(self.id,))
-        return f'<a href="{url}"> {self.title} </a>'
+	title = models.CharField(max_length=200)
+	project = models.ForeignKey(Post,related_name='event',on_delete=models.CASCADE, blank=True, null=True)
+	description = models.TextField()
+	meeting_link = models.URLField(max_length=250, null=True, blank=True)
+	start_time = models.DateTimeField()
+	end_time = models.DateTimeField()
+	@property
+	def get_html_url(self):
+		url = reverse('event_edit', args=(self.id,))
+		return f'<a href="{url}"> {self.title} </a>'
